@@ -222,8 +222,6 @@ Este sistema foi desenvolvido por Marco Aurélio Machado, Engenheiro de Controle
 
 O código de comunicação com a API ANA foi baseado nos exemplos oficiais fornecidos pela agência. Para dúvidas técnicas sobre a API ANA, contate: `hidro@ana.gov.br`
 
----
-
 **Última atualização**: Novembro 2025  
 **Versão do Sistema**: 2.1.0  
 **Base Técnica**: API HidroWeb ANA - Exemplos Oficiais  
