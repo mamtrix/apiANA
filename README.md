@@ -1,4 +1,5 @@
-````markdown
+
+```markdown
 # API ANA - Monitor de Nível do Guaíba
 
 Sistema Python para monitoramento automatizado do nível do Rio Guaíba através da API HidroWeb da ANA (Agência Nacional de Águas e Saneamento Básico) com integração Firebase.
@@ -7,7 +8,7 @@ Sistema Python para monitoramento automatizado do nível do Rio Guaíba através
 
 Este sistema foi desenvolvido para fornecer dados em tempo real do nível do Rio Guaíba através de um aplicativo móvel sem fins lucrativos. Coletamos dados da estação Cais Mauá C6 da ANA e disponibilizamos via Firebase Realtime Database para o aplicativo de monitoramento.
 
-**Importante**: Este código foi desenvolvido com base no exemplo oficial fornecido pela ANA conforme a documentação "manual-hidrowebservice_publica.pdf" anexo nesse repositório. Adaptamos e expandimos a funcionalidade básica para atender às necessidades específicas de monitoramento contínuo.
+**Importante**: Este código foi desenvolvido com base no exemplo oficial fornecido pela ANA conforme a documentação "manual-hidrowebservice_publica.pdf" anexa neste repositório. Adaptamos e expandimos a funcionalidade básica para atender às necessidades específicas de monitoramento contínuo.
 
 ## Dados Públicos e Conformidade Legal
 
@@ -24,11 +25,11 @@ O núcleo de comunicação com a API ANA foi implementado seguindo a documentaç
 
 As principais adaptações realizadas foram:
 
-- Código feito em Python 3
+- Código desenvolvido em Python 3
 - Implementação de coleta automática periódica
 - Integração com Firebase para disponibilização em tempo real
 - Sistema de detecção de mudanças para otimização de tráfego
-- Utilizado o padrão Singleton aumentando a confiabilidade
+- Utilização do padrão Singleton para aumentar a confiabilidade
 
 ## Funcionalidades
 
@@ -41,7 +42,7 @@ As principais adaptações realizadas foram:
 
 ## Arquitetura
 
-O sistema no padrão Singleton, garantindo que apenas uma instância do monitor esteja em execução. Isso melhora a confiabilidade e facilita a manutenção do código.
+O sistema segue o padrão Singleton, garantindo que apenas uma instância do monitor esteja em execução. Isso melhora a confiabilidade e facilita a manutenção do código.
 
 A estrutura básica de autenticação e consumo da API mantém a lógica original recomendada pela ANA, com adições para robustez e integração com outras plataformas.
 
@@ -65,13 +66,12 @@ cd apiANA
 # Instale as dependências
 pip install requests schedule firebase-admin
 ```
-````
 
 ## Configuração
 
 ### 1. Credenciais da ANA
 
-Crie o arquivo `caisMaua.log` com suas credenciais de acesso fornecidos pelo ANA seguindo o formato:
+Crie o arquivo `caisMaua.log` com suas credenciais de acesso fornecidas pela ANA seguindo o formato:
 
 ```json
 {
@@ -145,8 +145,8 @@ O arquivo `nivel.json` é atualizado a cada coleta:
 
 ```json
 {
-  "nivel": 2.45,
-  "data_medicao": "15/11/2024 14:30"
+  "nivel": 0.77,
+  "data_medicao": "03/11/2025 07:00"
 }
 ```
 
@@ -177,9 +177,9 @@ Edite o arquivo `caisMaua.log` com o código da estação desejada.
 O sistema fornece feedback detalhado no console:
 
 ```
-15/11/2024 14:30:00 - Coletando...
+03/11/2025 07:00:00 - Coletando...
 Firebase inicializado com sucesso
-Nivel do Guaiba: 2.45m (15/11/2024 14:30) - DADO NOVO
+Nivel do Guaiba: 0.77m (03/11/2025 07:00) - DADO NOVO
 Enviando para Firebase...
 Dados enviados para Firebase
 ```
@@ -228,7 +228,5 @@ O código de comunicação com a API ANA foi baseado nos exemplos oficiais forne
 **Versão do Sistema**: 2.1.0  
 **Base Técnica**: API HidroWeb ANA - Exemplos Oficiais  
 **Status Legal**: Dados Públicos - Conforme LGPD
-
 ```
 
-```
