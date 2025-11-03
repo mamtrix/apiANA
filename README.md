@@ -1,4 +1,4 @@
-````markdown
+
 # API ANA - Monitor de Nível do Guaíba
 
 Sistema Python para monitoramento automatizado do nível do Rio Guaíba através da API HidroWeb da ANA (Agência Nacional de Águas e Saneamento Básico) com integração Firebase.
@@ -65,7 +65,6 @@ cd apiANA
 # Instale as dependências
 pip install requests schedule firebase-admin
 ```
-````
 
 ## Configuração
 
